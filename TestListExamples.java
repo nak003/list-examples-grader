@@ -2,6 +2,12 @@ import static org.junit.Assert.*;
 import org.junit.*;
 import java.util.*; 
 
+class Checker implements StringChecker{
+  public boolean checkString(String s){
+    return s.contains("app");
+  }
+}
+
 public class TestListExamples {
   @Test
     public void testMerge(){
@@ -31,6 +37,7 @@ public class TestListExamples {
         expected.add("apple");
         expected.add("pineapple");
         expected.add("app");
+        StringChecker sc = new Checker();
         assertEquals(expected, ListExamples.filter(list1, sc));
   }
 }
