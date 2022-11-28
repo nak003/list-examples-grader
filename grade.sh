@@ -1,4 +1,3 @@
-# Create your grading script here
 rm -rf student-submission
 mkdir student-submission
 git clone $1 student-submission
