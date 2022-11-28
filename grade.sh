@@ -23,13 +23,15 @@ else
     exit 1
 fi 
 
-java -cp $CPATH org.junit.runner.JUnitCore TestListExamples
+java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > test.txt
 if [[ $? -eq 0 ]]
 then
     echo "All test passed! Total: 3/3 point"
+    cat test.txt
     exit 0
 
 else 
     echo "Test Error"
+    cat test.txt
     exit 1
 fi 
