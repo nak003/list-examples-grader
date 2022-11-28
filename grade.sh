@@ -24,7 +24,7 @@ else
     exit 1
 fi 
 
-java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > test.txt
+java -cp $CPATH org.junit.runner.JUnitCore TestListExamples
 if [[ $? -eq 0 ]]
 then
     ((GRADE++)) 
